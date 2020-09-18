@@ -24,8 +24,6 @@ This basic 'Hangman' word puzzle game is based on the popular Wheel of Fortune g
 Challenge yourself by turning on the countdown timer! You will be subject to the following time limits:- 
 - Guess a Consonant: 5 sec
 - Buy a Vowel: 5 sec
-- Solve the Puzzle: 15 sec
-
-After guessing each correct letter, you need to decide on your next step (Spin Wheel/Buy a Vowel/Solve the Puzzle) **within 10 sec too!**
+- Solve the Puzzle: 10 sec
 
 Definitely not for the faint of heart! ;)
