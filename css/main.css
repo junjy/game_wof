@@ -7,15 +7,12 @@ body {
 
 }
 
+/* ----- INTRO PAGE ----- */
+
 #intro-page {
     width: 100%;
-    /* max-width: 750px; */
-
-    /* margin: 50px 50px 50px 50px; */
-    
     display: inline-block;
     text-align: center;
-    
 
 }
 
@@ -38,58 +35,47 @@ body {
     border: 15px solid rgb(255, 230, 150);
     border-radius: 75px;
     box-shadow: 5px 5px 3px grey;
-    /* animation-name: intro-flash-outer;
-    animation-duration: 5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite; */
     animation: intro-flash-outer 5s infinite alternate ease-in-out;
-
 
   }
 
 #intro-logo {
-    /* width: 50%; */
 
-    /* width: 450px; */
     height: 200px;
-    /* margin-top: 25px;
-    margin-bottom: 25px; */
     position: relative;
-    /* transform: translate(50%, 50%); */
     font-family: 'Martel Sans', sans-serif;
-    /* text-shadow: 2px 2px 1px white; */
     font-size: 75px;
     font-weight: bolder;
     vertical-align: middle;
-    /* border: 5px solid orange; */
     background-color: rgb(220, 220, 220);
     color: black;
     border-radius: 50px;
-    /* animation-name: intro-flash; */
     animation: intro-flash 5s infinite alternate ease-in-out;
-    /* animation-duration: 5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    transition: color 5s; */
+
+}
+
+#intro-footer {
+    width: 100%;
+    position: absolute;
+    transform: translate(0%, 300%);
+    padding-top: 15px;
+    display: block;
 
     /* border: 1px solid grey; */
+
 }
 
+#intro-page #btn-info {
+    float: left;
+    margin-left: 100px;
 
-/* To improve animation transitions */
-
-/* @keyframes intro-flash {
-    0%   {background-color: rgb(220, 220, 220); color: black;}
-    50%  {background-color: rgb(255, 230, 150); color: black;} 
-    100% {background-color: rgb(200, 90, 90); color: white;}
 }
 
-@keyframes intro-flash-outer {
-    0%   {border-color: rgb(255, 230, 150);}
-    50%  {border-color: rgb(220, 220, 220);} 
-    100% {border-color: rgb(220, 220, 220);}
-} */
+#intro-page #btn-new-game {
+    float: right;
+    margin-right: 100px;
 
+}
 
 @keyframes intro-flash {
     0%   {background-color: rgb(220, 220, 220); color: black;}
@@ -105,68 +91,32 @@ body {
     100% {border-color: rgb(220, 220, 220);} 
 }
 
+/* ----- GAME PAGE ----- */
 
-
-
-#intro-footer {
-    width: 100%;
-    position: absolute;
-    transform: translate(0%, 300%);
-    padding-top: 15px;
-    display: block;
-
-    /* border: 1px solid grey; */
-
-}
-
-
-#intro-page #btn-info {
-    float: left;
-    margin-left: 100px;
-
-}
-
-#intro-page #btn-new-game {
-    float: right;
-    margin-right: 100px;
+#game-page {
+    display: none;
 
 }
 
 #game-page #btn-info {
     float: left;
     margin-left: 0px;
-
 }
 
 #game-page #btn-new-game {
     float: right;
     margin-right: 0px;
-
-}
-
-
-#game-page {
-    display: none;
-
-    /* width: 100%;
-    max-width: 900px;
-    max-height: 450px;
-    border: 1px solid grey; */
-
 }
 
 #section-top {
     width: 100%;
     max-width: 750px;
     max-height: 80px;
-    /* padding: 0; */
     display: inline-block;
     margin-top: 20px;
     margin-bottom: 5px;
-    /* padding: 25px 50px 50px 15px; */
     text-align: left;
-/* 
-    border: 1px solid blue; */
+
 }
 
 
@@ -175,9 +125,6 @@ body {
     max-width: 750px;
     max-height: 250px;
     display: inline-block;
-    /* padding-bottom: 10px; */
-
-    /* border: 1px solid blue; */
 
 }
 
@@ -185,24 +132,12 @@ body {
     width: 100%;
     max-width: 750px;
     max-height: 150px;
-    /* height: 50vh; */
     display: inline-block;
-
-    /* border: 1px solid blue; */
 
 }
 
 /* ----- SECTION TOP ----- */
 
-/* remove */
-#section-top h1 {
-    width: 60%;
-    float: left;
-    font-family: 'Martel Sans', sans-serif;
-    /* border: 1px solid grey; */
-    /* padding: 25px 50px 50px 15px; */
-    padding-left: 15px;
-}
 
 #game-header {
     width: 60%;
@@ -211,7 +146,7 @@ body {
     padding-left: 15px;
     margin-bottom: 0px;
     font-size: 50px;
-    /* border: 1px solid grey; */
+
 }
 
 
@@ -224,19 +159,14 @@ body {
     text-align: right;
     font-size: 12px;
 
-    /* border: 1px solid grey; */
-
 }
 
 #progress-display {
     width: 40%;
     float: right;
-    /* margin-top: 15px; */
     padding-right: 15px;
     text-align: right;
     font-size: 12px;
-
-    /* border: 1px solid grey; */
 
 }
 
@@ -248,15 +178,8 @@ body {
     max-width: 500px;
     min-height: 250px;
     float: left;
-    /* text-align: center; */
-
     vertical-align: middle;
-    padding: 50px 60px 0px 50px;
-    /* padding-top: 75px; */
-    /* padding-right: 50px; */
-    /* border: 1px solid grey; */
-
-
+    padding: 50px 65px 0px 50px;
 
 }
 
@@ -269,21 +192,13 @@ body {
     vertical-align: top;
     padding-right: 0; /* amend Bootstrap */
     padding-left: 0; /* amend Bootstrap */
-    /* margin-top: 10px; */
     margin: 10px 0px 10px 0px; /* amend Bootstrap */
-    /* margin-right: 0; 
-    margin-left: 0;  */
-    /* border: 1px solid grey; */
 
 }
 
 
 #wheel-img {
-
-    /* font-size: 35px;
-    font-weight: bold; */
     padding-top: 150px;
-    /* display: none; */
 
 }
 
@@ -295,14 +210,9 @@ body {
     font-weight: bolder;
     color: rgb(200, 90, 90);
 
-    /* Add animation later */
-    /* animation: animate__shakeX;
-    animation-duration: 2s; */
-
 }
 
 /* ----- SECTION BOTTOM ----- */
-
 
 #score-div:before {
     width: 60%;
@@ -311,12 +221,9 @@ body {
     font-family: 'Roboto Slab', serif;
     margin-left: 0px;
     padding-left: 20px;
-    /* padding-right: 20px; */
     font-size: 35px;
     text-align: left;
     display: block;
-
-    /* border: 1px solid grey; */
     
 }
 
@@ -325,17 +232,11 @@ body {
     max-width: 500px;
     max-height: 150px;
     padding-right: 55px;
-    /* width: 40%; */
     height: 125px;
     float: left;
     vertical-align: top;
-    /* width: 350px; */
-    /* border: 1px solid grey; */
     text-align: center;
     color: black;
-    /* vertical-align: middle; */
-
-    /* border: 1px solid grey; */
 
 }
 
@@ -343,12 +244,10 @@ body {
     content: close-quote;
     font-family: 'Roboto Slab', serif;
     margin-right: 0px;
-    /* padding-left: 30px; */
     font-size: 35px;
     text-align: right;
     display: block;
 
-    /* border: 1px solid grey; */
 }
 
 #input-div {
@@ -357,10 +256,7 @@ body {
     min-height: 50px;
     float: right;
     padding-top: 25px;
-    /* padding-top: 15px; */
     text-align: center;
-
-    /* border: 1px solid grey; */
 
 }
 
@@ -370,17 +266,14 @@ body {
     min-height: 100px;
     float: right;
     padding-top: 15px;
-    /* padding-top: 25px; */
     text-align: center;
-
-    /* border: 1px solid grey; */
 
 }
 
 /* ----- FOR PUZZLE BOARD ----- */
 
+/* KIV */
 .word-span {
-    /* border: 1px solid blue; */
     white-space: nowrap;
     
 }
@@ -399,8 +292,6 @@ body {
 .square-text {
     background-color: white;
     color: white;
-    /* display: none; */
-    
     white-space: nowrap;
 
 }
@@ -408,7 +299,6 @@ body {
 .square-display {
     background-color: white;
     color: black;
-    /* display: none; */
 
 }
 
@@ -426,10 +316,7 @@ body {
     display: inline-block;
     text-align: center;
     margin-bottom: 10px;
-    /* background: #3D9970;
-    color: #3D9970; */
     background-color: white;
-    /* background-color: orange; */
     color: white;
     border: 0px;
 }
@@ -440,26 +327,8 @@ body {
     100% {background-color: white; color: black;}
 }
 
-/* ----- FOR MESSAGE BOARD DISPLAY ----- */
+/* ----- FOR MODAL DISPLAY ----- */
 
-
-/* .msg-delay {
-    color: black;
-    animation-name: msg-delay;
-    animation-duration: 3s;
-
-}
-
-@keyframes msg-delay {
-    0%   {opacity: 0}
-    100% {opacity: 1}
-} */
-
-
-
-/* ----- FOR MODAL DISPLAY (IF USING) ----- */
-
-/* check if using */
 .modal-cover {
     background: black;
     opacity: 0.3;
@@ -477,7 +346,7 @@ body {
     width: 100%;
     position: fixed;
     left: 0;
-    top: 100px;
+    top: 30px;
     display: none; /* modify to block */
     z-index: 5;
 }
@@ -492,8 +361,6 @@ body {
     text-align: justify;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-
-    /* overflow: auto; */
     overflow-y: auto;
 }
 
@@ -501,23 +368,17 @@ body {
 /* ----- FOR WHEEL ----- */
 
 text {
-    /* font-family:Helvetica, Arial, sans-serif; */
     font-size: 11px;
     pointer-events:none;
 }
 
 /* Actual Wheel */
 #chart {
-    /* position:absolute; */
-    /* width:500px;
-    height:500px; */
     width: 225px;
     height: 225px;
     padding: 0;
     margin: 0;
     float: top;
-    /* top:0;
-    left:0; */
     display: none;  /* only turn on when game starts */
 }
 
@@ -529,37 +390,5 @@ text {
     margin: 0;
     float: top;
     display: inline;
+
 }
-
-
-
-/* @keyframes flying {
-    0% {
-      transform: rotate(0deg) scale(0);
-    }
-  
-    100% {
-      transform: rotate(3600deg) scale(1);
-    }
-  }
-  
-  .newspaper {
-      /* animation: flying 3s linear 1 forwards; */
-      /* animation: flying 3s ease-in-out 1 forwards; */
-  
-  /* } */
-
-/* Media Queries - To check*/
-  
-/* @media screen and (max-width: 992px) {
-    #intro-logo {
-        font-size: 35px;
-    }
-  }
-   */
-
-/* @media screen and (max-width: 600px) {
-    body {
-      
-    }
-  } */
