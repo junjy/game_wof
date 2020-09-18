@@ -1,8 +1,5 @@
-// 'use strict'
 
 console.log('linked wheel.js');
-
-// to tidy up code later
 
 // Credits to SPIN WHEEL USING JS by sumeshkp18 https://codepen.io/sumeshkp18/pen/VGBPYg
 // Adapted from above with following amendments:
@@ -11,7 +8,7 @@ console.log('linked wheel.js');
 // - Adjust segment colours & text values (done)
 // - Write function to extract spin value (done)
 // - Allow wheel to spin to any value (done)
-// - Align page layout for wheel & playerstand (60% done)
+// - Align page layout for wheel & playerstand (done)
 
 // UPDATE: ADD GLOBAL VARIABLE
 var spinValueFrWheel;
@@ -91,7 +88,6 @@ var data = [
     {"value": 23, "label": '700', "fillColor": '#fff200'},
     {"value": 24, "label": '800', "fillColor": '#00aef0'}
 ];
-
 
 // var data = [
 //         {"label":"Dell LAPTOP",  "value":1,  "question":"What CSS property is used for specifying the area between the content and its border?"}, // padding
@@ -193,7 +189,6 @@ $(document).ready(function() {
         // UPDATE: COMMENT OUT
         // picked = picked >= data.length ? (picked % data.length) : picked;
     
-        // UPDATE: CHECK IF WHEEL DOESN'T ALLOW SAME SPIN TWICE
         // UPDATE: COMMENT OUT
         // if (oldpick.indexOf(picked) !== -1){
         //     d3.select(this).call(spin);
@@ -209,7 +204,7 @@ $(document).ready(function() {
             .each("end", function(){
                 //mark question as seen
 
-                //UPDATE COMMENT OUT
+                //UPDATE: COMMENT OUT
                 // d3.select(".slice:nth-child(" + (picked + 1) + ") path")
                 d3.select(".slice:nth-child(" + (picked + 1) + ") path")
     
@@ -263,68 +258,6 @@ $(document).ready(function() {
     });
 
 });
-
-// MAIN SPIN FUNCTION
-// function spin(d){
-
-//     container.on("click", null);
-//     //all slices have been seen, all done
-//     console.log("OldPick: " + oldpick.length, "Data length: " + data.length);
-
-//     if(oldpick.length == data.length){
-//         console.log("done");
-//         container.on("click", null);
-//         return;
-//     }
-
-//     var ps = 360/data.length,
-//             pieslice = Math.round(1440/data.length),
-//             rng      = Math.floor((Math.random() * 1440) + 360);
-        
-//     rotation = (Math.round(rng / ps) * ps);
-
-//     picked = Math.round(data.length - (rotation % 360)/ps);
-//     picked = picked >= data.length ? (picked % data.length) : picked;
-
-//     // UPDATE: CHECK IF WHEEL DOESN'T ALLOW SAME SPIN TWICE
-//     if (oldpick.indexOf(picked) !== -1){
-//         d3.select(this).call(spin);
-//         return;
-//     } else {
-//         oldpick.push(picked);
-//     }
-
-//     rotation += 90 - Math.round(ps/2);
-//     vis.transition()
-//         .duration(3000)
-//         .attrTween("transform", rotTween)
-//         .each("end", function(){
-//             //mark question as seen
-//             d3.select(".slice:nth-child(" + (picked + 1) + ") path")
-
-//     // UPDATE: REMOVE SELECTED SEGMENT PERMANENT FILL
-
-//                 .attr("fill", "grey");
-
-//             //populate question
-
-//     // UPDATE: TO TRANSFER SPIN VALUE TO VAR & DISPLAY ONSCREEN
-//             d3.select("#question h1")
-//                 .text(data[picked].question);
-//             oldrotation = rotation;
-        
-//             /* Get the result value from object "data" */
-//             console.log(data[picked].value)
-
-//             // UPDATE: ADD Store spin value in global variable
-//             spinValueFrWheel = data[picked].label;
-//             // wheelDiv.innerHTML = 'Spin Value from Wheel: $' + spinValueFrWheel;
-        
-//             /* Comment the below line for restrict spin to single time */
-//             // container.on("click", spin);
-//         });
-
-// }
 
 
 //make arrow
