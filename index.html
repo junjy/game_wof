@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@700&family=Roboto&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+
+    <title>Wheel of Fortune</title>
+  </head>
+  <body>
+
+    <!-- <div class='modal-cover'> -->
+
+        <div id='intro-page' class='container'>
+            <div id='logo-holder'>
+                <div id='intro-logo'>wheel.of<br \>.fortune</div>
+            </div>
+
+            <div id='intro-footer'></div>
+        </div>
+
+        <div id='game-page'>
+            <div id='section-top'>
+                <!-- <h1>wheel.of.fortune</h1> -->
+                <p id='game-header'>wheel.of.fortune</p>
+                <div id='timer-display'></div>
+                <div id='progress-display'></div>
+            </div>
+
+            <div id='section-middle' class='container'>
+                <div id='puzzle-div'></div>
+
+                <div id='wheel-div'>
+                    <!--- For Wheel -->
+                    <div id="wheel-img">
+                        <p>G-A-M-E
+                        <br \>O-V-E-R</p>
+                        <!-- <img src="https://via.placeholder.com/225"> -->
+                        <!-- <img src="img/wheel-static4.png" width="220" height="210" style="padding-top: 10px"> -->
+                        <!-- width="225" height="225" -->
+                    </div> <!-- wheel img only -->
+                    <div id="chart"></div> <!-- actual wheel -->
+                    <!--- END Wheel -->
+                </div>
+            </div>
+                
+            <div id='section-bottom' class='container'>
+                <div id='score-div'></div>
+                <div id='input-div'></div>
+                <div id='buttons-div'></div>
+                <br \>
+            </div>
+
+        </div>
+
+    <!-- </div> -->
+
+    <!-- Instructions -->
+    <div class='modal-cover'></div>
+
+    <div id='instructions' class='modal-popup'>
+        <div class='content'>
+            <h4>HOW TO PLAY</h4>
+            <p>This basic word puzzle game is modelled on the popular Wheel of Fortune gameshow with some minor variations.</p>
+            
+            <p><b>1. This is a single-player game.</b><br \>
+            - There is still a total of 24 values on the wheel (between $300 to $3000 or 'BANKRUPT') but no 'LOSE A TURN' option.</p>
+            
+            <p><b>2. You can play up to 3 rounds per game.</b> Each round features 1 word puzzle (phrase or sentence).<br \> 
+            - Your goal is to solve all puzzles at the end of 3 rounds without spinning 'BANKRUPT' or making a wrong guess.<br \>
+            - You may exit the game at any time.</p>
+            
+            <p><b>3. At the start of each round, you can only Spin the Wheel.</b><br \>
+            - Thereafter, you can choose any of the following 3 options:-<br \>
+            (1) Spin the Wheel<br \>
+            (2) Buy a Vowel<br \>
+            (3) Solve the Puzzle</p>
+            
+            <p><h5>Spin the Wheel</h5>
+            - First, spin the wheel to get a dollar value and guess a consonant by typing the letter in the input field.<br \> 
+            - Calling a correct letter earns the value multiplied by the number of times the letter appears in the puzzle.</p>
+            
+            <p><h5>Buy a Vowel</h5>
+            - Before buying a vowel, you must ensure a minimum of $250 in earnings.<br \> 
+            - Each vowel costs $250, regardless of the number of times it appears in the puzzle.<br \> 
+            - To guess the vowel, type the letter in the input field.</p>
+            
+            <p><h5>Solve the Puzzle</h5>
+            - You may choose to solve the puzzle at any time without waiting to guess all the letters.<br \>
+            - Type your answer in full in the input field, including any spaces, dashes (-), dots (.), apostrophes (') and other special characters as displayed in the puzzle.</p>
+            
+            <p><b>4. Your earnings in that round will be reset to $0 and you will exit the game if any of the following scenarios occur:-</b><br \>
+            - Spin the Wheel: If flipper falls on 'BANKRUPT' or guessed consonant is incorrect.<br \>
+            - Buy a Vowel: If you have insufficient money to buy a vowel in that round or guessed vowel is incorrect.<br \>
+            - Solve the Puzzle: If or your answer is incorrect or you did not type the answer in full including any special characters (see above).</p>
+            
+            <p>Your earnings for the previous successful rounds will not be affected.</p>
+            
+            <p><h5>5. UP THE STAKES!</h5>
+            Challenge yourself by turning on the timed puzzle feature:-<br \>
+            - Guess a Consonant: 5 sec<br \>
+            - Buy a Vowel: 5 sec<br \>
+            - Solve the Puzzle: 10 sec<br \>
+            - Choose each of your next steps (Spin Wheel/Buy a Vowel/Solve the Puzzle): 10 sec.</p>
+            
+            <p>Have fun!</p>
+            <br \>
+            <button type="button" class="modal-close-btn">CLOSE</button>
+
+        </div>
+
+    </div>
+
+    <!-- Audio -->
+    <audio id='sound-bankrupt' src='audio/bankrupt.mp3'></audio>
+    <audio id='sound-buzzer' src='audio/buzzer.mp3'></audio>
+    <audio id='sound-ding' src='audio/ding.mp3'></audio>
+    <audio id='sound-reveal' src='audio/puzzle_reveal.mp3'></audio>
+    <audio id='sound-solve' src='audio/puzzle_solve.mp3'></audio>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="script/main.js"></script>
+    <!-- <script src="script/main5.js"></script> -->
+    <script src="script/puzzles.js"></script>   
+    <!-- <script src="script/test_input.js"></script> -->
+    <!-- <script src="script/test_puzzle.js"></script> -->
+
+    <!---Link for wheel-->
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="script/wheel.js"></script>
+  </body>
+</html>
